@@ -1,0 +1,137 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f8f8;
+}
+
+body {
+    margin: 0;
+    background-color: #121212;
+}
+
+header {
+    background-color: #0c0c0c;
+    color: #f8f8f8;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+    height: 200px;
+    background-color: #0c0c0c;
+    color: #f8f8f8;
+}
+
+a {
+    color: inherit;
+}
+
+nav.horizontal {
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+
+nav.horizontal li {
+    display: inline;
+    content: fill;
+    float: left;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 17px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+nav.horizontal ul.right {
+    position: absolute;
+    right: 0;
+}
+
+/* Item Normal Elements have no border/outline */
+nav.horizontal .item-normal {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Item Button Elements have a border/outline
+    Can be set to the ul background color to
+    instead add a curved 'button-like' shape */
+nav.horizontal .item-button {
+    background-color: inherit;
+    margin-top: 6px;
+    margin-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px rgba(255, 255, 255, 0.50) solid;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+nav.horizontal li:hover {
+    background-color: rgba(85, 177, 139, 0.80);
+    cursor: pointer;
+}
+
+nav.horizontal .item-logo {
+    display: inline;
+    content: fill;
+    float: left;
+    margin: 0;
+    height: 35px;
+    width: auto;
+    margin-left: 10px;
+}
+
+nav.horizontal .item-logo:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+
+
+
+
+#front-image {
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+#front-image #background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-mode: luminance;
+    mask-image: linear-gradient(rgb(112, 112, 112), transparent);
+}
+
+#front-image h1{
+    z-index: 2;
+    color: rgb(35, 204, 134);
+    font-size: 64pt;
+    margin: 0;
+    position: absolute;
+    margin-top: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-shadow: #000000 0px 0px 15px, #000000 1px 1px 15px, #000000 1px 0px 15px, #000000 0px 1px 15px;
+}
+
+#front-image .discolor{
+    color: rgb(19, 24, 21);
+}
