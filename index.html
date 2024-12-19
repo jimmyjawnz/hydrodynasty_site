@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +7,89 @@
     <title>HydroDynasty</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./images/HydroDynasty-logo-favicon.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
         <nav class="horizontal">
-            <a href="./index.html"><img id="logo" class="item-logo" src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo" ></a>
+            <a href="./index.html" class="item-logo"><img id="logo" src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo" ></a>
             <ul>
                 <a href="./index.html"><li id="home" class="item-normal">Home</li></a>
                 <a href="./index.html"><li id="products" class="item-normal">Products</li></a>
                 <a href="./index.html"><li id="about-us" class="item-normal">About Us</li></a>
-                <ul class="right">
-                    <li id="login" class="item-button">Login</li>
-                    <li id="register" class="item-button">Register</li>
-                </ul>
+            </ul>
+            <ul class="right">
+                <a href="./index.html" class="item-button"><li id="register">Register</li></a>
+                <a href="./index.html" class="item-button"><li id="login">Login</li></a>
+            </ul>
+        </nav>
+        <nav class="horizontal mobile">
+            <a href="./index.html" class="item-logo"><img id="logo" src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo" ></a>
+            <ul id="dropdown">
+                <a href="./index.html"><li id="home" class="item-normal">Home</li></a>
+                <a href="./index.html"><li id="products" class="item-normal">Products</li></a>
+                <a href="./index.html"><li id="about-us" class="item-normal">About Us</li></a>
+            </ul>
+            <ul>
+                <a href="./index.html" class="item-button"><li id="register">Register</li></a>
+                <a href="./index.html" class="item-button"><li id="login">Login</li></a>
+            </ul>
+            <ul class="right">
+                <a class="item-button burger"><li id="burger-menu"><h1>☰</h1></li></a>
             </ul>
         </nav>
     </header>
 
+    <!-- Modals and Popups-->
+    <div id="login-modal" style="display: none;">
+        <form>
+            <input type="text" id=""
+        </form>
+    </div>
+
     <main>
         <section id="front-image">
-            <h1><i>Hydro<span class="discolor">Dynasty</span></i></h1>
+            <h1 class="color-bright-green"><i>Hydro<span class="color-off-green">Dynasty</span></i></h1>
             <img id="background" src="./images/temp-main-stock.jpeg" alt="Image of our Planters">
+        </section>
+        <section id="first-impression">
+            <div class="rounded-container b-color-dark">
+                <h1>What is <i><span class="color-bright-green">Hydro</span><span class="color-off-green">Dynasty</span></i>?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel vero minima, amet quae iusto vitae in dolore ut rem facere neque maiores esse sunt laborum et ullam numquam eveniet autem!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, est non? Eaque provident reiciendis velit facere quis inventore. Minus nostrum ex qui rem illum tempora ullam temporibus dolores unde natus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi consequatur eos ipsa, cupiditate similique ad doloribus ab sunt voluptas cumque illum sequi deserunt molestiae odio quod consectetur explicabo tempora odit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facere inventore ratione dolorum minima quae reiciendis quaerat, necessitatibus consectetur! Ex exercitationem quis aperiam ducimus, quos incidunt perspiciatis nemo odio laboriosam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, placeat et veniam, natus voluptate ut nam commodi minus consectetur deleniti odio deserunt quas corrupti eius ipsum soluta fuga ad! Quisquam.</p>
+            </div>
+            <div class="rounded-container image b-color-light">
+                <img src="./images/temp-main-stock.jpeg" alt="HydroDynasty Logo">
+                <div class="content">
+                    <h1>What is <i><span class="color-bright-green">Hydro</span><span class="color-off-green">Dynasty</span></i>?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel vero minima, amet quae iusto vitae in dolore ut rem facere neque maiores esse sunt laborum et ullam numquam eveniet autem!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, est non? Eaque provident reiciendis velit facere quis inventore. Minus nostrum ex qui rem illum tempora ullam temporibus dolores unde natus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi consequatur eos ipsa, cupiditate similique ad doloribus ab sunt voluptas cumque illum sequi deserunt molestiae odio quod consectetur explicabo tempora odit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facere inventore ratione dolorum minima quae reiciendis quaerat, necessitatibus consectetur! Ex exercitationem quis aperiam ducimus, quos incidunt perspiciatis nemo odio laboriosam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, placeat et veniam, natus voluptate ut nam commodi minus consectetur deleniti odio deserunt quas corrupti eius ipsum soluta fuga ad! Quisquam.</p>
+                </div>
+            </div>
+            <div class="rounded-container image right">
+                <div class="content">
+                    <h1>What is <i><span class="color-bright-green">Hydro</span><span class="color-off-green">Dynasty</span></i>?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel vero minima, amet quae iusto vitae in dolore ut rem facere neque maiores esse sunt laborum et ullam numquam eveniet autem!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, est non? Eaque provident reiciendis velit facere quis inventore. Minus nostrum ex qui rem illum tempora ullam temporibus dolores unde natus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi consequatur eos ipsa, cupiditate similique ad doloribus ab sunt voluptas cumque illum sequi deserunt molestiae odio quod consectetur explicabo tempora odit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facere inventore ratione dolorum minima quae reiciendis quaerat, necessitatibus consectetur! Ex exercitationem quis aperiam ducimus, quos incidunt perspiciatis nemo odio laboriosam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, placeat et veniam, natus voluptate ut nam commodi minus consectetur deleniti odio deserunt quas corrupti eius ipsum soluta fuga ad! Quisquam.</p>
+                </div>
+                <img src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo">
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copyHydroDynasty 2024</p>
+        <div class="flex">
+            <img id="flogo" class="left-float" src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo">
+            <nav class="footer">
+                <ul>
+                    <li id="home"><a href="./index.html">Home</a></li>
+                    <li id="products"><a href="./index.html">Products</a></li>
+                    <li id="about-us"><a href="./index.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="credit"><p>&copyHydroDynasty 2024  --  Made by James Provost</p></div>
     </footer>
-    <script src="index.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
