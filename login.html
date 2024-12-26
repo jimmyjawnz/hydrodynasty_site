@@ -21,7 +21,7 @@
             </ul>
             <ul class="right">
                 <a href="./login.html" class="item-button"><li id="register">Register</li></a>
-                <a class="item-button"><li id="login">Login</li></a>
+                <a href="./login.html" class="item-button"><li id="login">Login</li></a>
             </ul>
         </nav>
         <nav class="horizontal mobile">
@@ -34,22 +34,11 @@
             <ul>
                 <a href="./products.html"><li id="products" class="item-normal">Products</li></a>
                 <a href="./about-us.html"><li id="about-us" class="item-normal">About Us</li></a>
-                <a id="login" class="item-button"><li>Login/Register</li></a>
+                <a href="./login.html" class="item-button"><li id="login">Login/Register</li></a>
             </ul>
         </nav>
         <a class="item-button burger"><h1>☰</h1></a>
     </header>
-
-    <div id="login-modal" class="modal-container" style="display: none; z-index: 10;">
-        <div id="exit-area"></div>
-        <div class="modal">
-            <button id="exit-button" onclick="closeModal('#login-modal')">✖</button>
-            <h1>Login</h1>
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <p class="small-font">Don't have an account? <a class="color-dark-blue">Click here to Register</a></p>
-        </div>
-    </div>
 
     <main>
         <section id="front-image">
