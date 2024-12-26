@@ -31,14 +31,30 @@ $(document).ready(function() {
   }
 
   // LOGIN HANDLER
-  $('#login').click(function() {
+  $('.login-button').click(function() {
     console.log("Clicked login");
-    $('#login-modal #exit-area').show();
+    $('#login-modal h1').html("Login");
+    $('#login-modal .submit-button').html("Login");
+    $('#login-modal input[name=passwordConfirm]').prop("required", false).hide();
+    $('#login-modal .login-link').hide();
+    $('#login-modal .register-link').show();
+    $('#login-modal .exit-area').show();
     $('#login-modal').fadeIn("slow");
   });
 
-  $('#login-modal #exit-area').click(function() {
+  $('#login-modal .exit-area').click(function() {
     closeModal('#login-modal');
   });
 
+  $('.register-button').click(function() {
+    $('#login-modal h1').html("Register");
+    $('#login-modal .register-link').hide();
+    $('#login-modal .login-link').show();
+    $('#login-modal .submit-button').html("Register Account");
+    $('#login-modal input[name=passwordConfirm]').prop("required", true).show();
+    $('#login-modal .exit-area').show();
+    $('#login-modal').fadeIn("slow");
+  });
+
+  // MODAL HANDLER
 });
