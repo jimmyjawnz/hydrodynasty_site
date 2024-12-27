@@ -33,10 +33,12 @@ $(document).ready(function() {
   // Burger Menu
   $('a.burger').click(function() {
     if ($('body').hasClass("stop-scrolling")) {
+      $('a.burger h1').html("☰");
       $(".burger-menu").slideUp();
       $('body').removeClass('stop-scrolling');
     }
     else {
+      $('a.burger h1').html("✖");
       $(".burger-menu").slideDown();
       $('body').addClass('stop-scrolling');
     }
