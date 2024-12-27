@@ -20,15 +20,28 @@ $(document).ready(function() {
     else
     {
       if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
-        $('header nav.mobile').stop().fadeOut("fast");
-        $('header').stop().animate({"height": '90px', backgroundColor: "transparent"}, "fast");
+        $('header nav.mobile').stop().fadeOut(400);
+        $('header').stop().animate({"height": '90px', backgroundColor: "transparent"}, 400);
       }
       else {
-        $('header nav.mobile').stop().fadeIn("fast");
-        $('header').stop().animate({"height": '90px', backgroundColor: "#0c0c0c"}, "fast");
+        $('header nav.mobile').stop().fadeIn(200);
+        $('header').stop().animate({"height": '90px', backgroundColor: "#0c0c0c"}, 200);
       }
     }
   }
+
+  // Burger Menu
+  $('a.burger').click(function() {
+    if ($('body').hasClass("stop-scrolling")) {
+      $(".burger-menu").slideUp();
+      $('body').removeClass('stop-scrolling');
+    }
+    else {
+      $(".burger-menu").slideDown();
+      $('body').addClass('stop-scrolling');
+    }
+
+  })
 
   // LOGIN HANDLER
   $('.login-button').click(function() {

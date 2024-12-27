@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Us</title>
+    <title>HydroDynasty</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./images/HydroDynasty-logo-favicon.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
   </head>
   <body>
     <header>
@@ -15,30 +16,46 @@
             <a href="./index.html" class="item-logo"><img id="logo" src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo" ></a>
             <ul>
                 <a href="./index.html"><li id="home" class="item-normal">Home</li></a>
-                <a href="./index.html"><li id="products" class="item-normal">Products</li></a>
+                <a href="./products.html"><li id="products" class="item-normal">Products</li></a>
                 <a href="./about-us.html"><li id="about-us" class="item-normal">About Us</li></a>
             </ul>
             <ul class="right">
-                <a href="./index.html" class="item-button"><li id="register">Register</li></a>
-                <a href="./index.html" class="item-button"><li id="login">Login</li></a>
+                <a class="item-button register-button"><li>Register</li></a>
+                <a class="item-button login-button"><li>Login</li></a>
             </ul>
         </nav>
         <nav class="horizontal mobile">
             <a href="./index.html" class="item-logo"><img id="logo" src="./images/HydroDynasty-logo-wide.png" alt="HydroDynasty Logo" ></a>
-            <ul id="dropdown">
-                <a href="./index.html"><li id="home" class="item-normal">Home</li></a>
-                <a href="./index.html"><li id="products" class="item-normal">Products</li></a>
-                <a href="./about-us.html"><li id="about-us" class="item-normal">About Us</li></a>
-            </ul>
             <ul>
-                <a href="./index.html" class="item-button"><li id="register">Register</li></a>
-                <a href="./index.html" class="item-button"><li id="login">Login</li></a>
+                <a href="./products.html"><li id="products" class="item-normal">Products</li></a>
+                <a href="./about-us.html"><li id="about-us" class="item-normal">About Us</li></a>
+                <a class="item-button login-button"><li>Login/Register</li></a>
             </ul>
-            <ul class="right">
-                <a class="item-button burger"><li id="burger-menu"><h1>☰</h1></li></a>
+        </nav>
+        <a class="item-button burger"><h1>☰</h1></a>
+        <nav class="horizontal burger-menu" style="display: none;">
+            <ul>
+                <a href="./index.html"><li id="home" class="item-normal">Home</li></a>
+                <a href="./products.html"><li id="products" class="item-normal">Products</li></a>
+                <a href="./about-us.html"><li id="about-us" class="item-normal">About Us</li></a>
             </ul>
         </nav>
     </header>
+
+    <div id="login-modal" class="modal-container" style="display: none; z-index: 10;">
+        <div class="exit-area"></div>
+        <form class="modal">
+            <button class="exit-button" onclick="closeModal('#login-modal')" type="button">✖</button>
+            <h1 style="display: none;">Login</h1>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="passwordConfirm" placeholder="Confirm Password" style="display: none;">
+            <p class="error-message"> </p>
+            <button class="submit-button item-button" type="submit">Login</button>
+            <p class="small-font register-link">Don't have an account? <a class="color-dark-blue register-button">Click here to Register</a></p>
+            <p class="small-font login-link" style="display: none;">Already have an account? <a class="color-dark-blue login-button">Click here to Login</a></p>
+        </form>
+    </div>
 
     <main>
         <section id="front-image">
@@ -83,5 +100,6 @@
         </div>
         <div class="credit"><p>&copyHydroDynasty 2024  --  Made by James Provost</p></div>
     </footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
